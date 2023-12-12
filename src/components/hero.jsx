@@ -8,17 +8,20 @@ const changa  = Changa({subsets : ['latin']})
 export const animateVariant = {
   hidden : {
     opacity : 0,
-    y : 500
+    y : 200
   },
   visible : {
     opacity : 1,
     y :0,
     transition : {
-      type :"spring",
-      stiffness : "220",
+      type : "tween",
+      duration : 1,
       ease : "easeOut"
     }
   },
+  exitVariant : {
+    x : "-100vw"
+  }
 }
 
 export default function Hero() {
@@ -27,6 +30,7 @@ export default function Hero() {
     variants={animateVariant}
     initial="hidden"
     animate="visible"
+    exit={"exitVariant"}
     className='w-full flex items-center flex-1 justify-center flex-col py-10'>
       <p className='uppercase text-lg md:text-2xl font-extralight tracking-widest'>
         <span className='font-bold'>hello! </span>

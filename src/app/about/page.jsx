@@ -2,6 +2,9 @@
 import { Changa } from 'next/font/google'
 import Image from 'next/image'
 import React from 'react'
+import { animateVariant } from '@/components/hero'
+import { motion } from 'framer-motion'
+import PageTransitionLayout from '../layouts/pageTransitionLayout'
 const changa  = Changa({subsets : ['latin']})
 
 export default function About() {
@@ -21,7 +24,13 @@ export default function About() {
 
   ]
   return (
-    <div className='flex-1'>
+    // <PageTransitionLayout></PageTransitionLayout>
+    <motion.div 
+    variants={animateVariant}
+    initial="hidden"
+    animate="visible"
+    exit={"exitVariant"}
+    className='flex-1'>
       <h1 className='uppercase font-thin text-lg md:text-2xl mt-5'>about</h1>
       <div className={`${changa.className} mt-2 md:mt-10`}>
         <p className='text-2xl md:text-6xl font-extrabold'>
@@ -62,6 +71,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

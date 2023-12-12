@@ -1,10 +1,13 @@
+import React, { useContext, Ref } from 'react';
 import Nav from '@/components/nav'
 import ParticleHeader from '@/components/particle-header'
 import Taskbar from '@/components/taskbar';
 import ReduxProvider from '@/store/provider';
 import { Inter, Space_Mono, BioRhyme, Eczar, Space_Grotesk } from 'next/font/google';
 import './globals.css'
-import Providers from './Providers'
+import Providers from './Providers';
+
+import { motion, AnimatePresence } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'] })
 // export const changa = Changa({ subsets: ['latin'] })

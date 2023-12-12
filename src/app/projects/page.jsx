@@ -5,12 +5,18 @@ import { useSelector } from 'react-redux';
 import { GoLinkExternal } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineArrowForward } from "react-icons/md";
+import { motion } from 'framer-motion';
+import { animateVariant } from '@/components/hero';
 import Link from 'next/link';
 
 export default function Projects() {
   const projects  = useSelector(state=>state.projects.projects);
   return (
-    <div
+    <motion.div
+    variants={animateVariant}
+    initial="hidden"
+    animate="visible"
+    exit={"exitVariant"}
     className='flex-1 py-10'
     >
       <div className='relative w-full md:w-[75%] mx-auto'>
@@ -73,6 +79,6 @@ export default function Projects() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
