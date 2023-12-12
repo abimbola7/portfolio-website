@@ -53,7 +53,7 @@ export default function About() {
                 height={20}
                 alt={skill.icons} 
                 />
-                <p>
+                <p className="text-center">
                   {skill.name}
                 </p>
                 </div>
