@@ -26,7 +26,7 @@ export default function Nav() {
           setIcon(null)
         }}
         href="/">
-          <p>{name}</p>
+          <p className=''>{name}</p>
           {icon}
         </Link>  
       </div>
@@ -41,7 +41,7 @@ export default function Nav() {
             <Link 
             key={item} 
             href={url}
-            className="items-center hidden space-x-2 md:flex"
+            className={`items-center hidden space-x-2 md:flex relative hover:before:absolute hover:before:w-full hover:before:h-2 hover:before:bg-[#f7801e] hover:before:bg-opacity-40 hover:before:rounded-sm ${ pathname === url && "text-[#f7801e]" }`}
             >
             {
               pathname === url && (

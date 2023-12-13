@@ -18,7 +18,7 @@ export default function Switch() {
           onClick={()=>theme === "light" ? setTheme("dark") : setTheme("light")}
           className='w-16 px-1 py-1 bg-black cursor-pointer rounded-3xl relative'>
             <div 
-            className={`bg-red-500 rounded-full w-7 h-7 transition-transform duration-300 ${theme === "dark" ? "translate-x-full" : "translate-x-0"} flex justify-between items-center`}
+            className={`bg-[#f7801e] rounded-full w-7 h-7 transition-transform duration-300 ${theme === "dark" ? "translate-x-full" : "translate-x-0"} flex justify-between items-center`}
             >
             </div>
             <div className='absolute flex top-0 w-full h-full justify-between items-center pr-2 text-xl'>
