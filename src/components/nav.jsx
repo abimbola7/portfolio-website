@@ -15,7 +15,7 @@ export default function Nav() {
     <header className='flex items-center justify-between pt-10 md:pt-20'>
       <div className=''>
         <Link 
-        className='flex flex-row items-center space-x-1'
+        className={`flex flex-row items-center space-x-1 ${name === "back to home" && "hover:text-[#f7801e]"}`}
         onMouseOver={()=>{
             pathname !== "/" ? setName("back to home") : setName("abimbola.dev");
             pathname !== "/" ? setIcon(<CiHome className='text-xl'/>) : setIcon(null);
@@ -41,14 +41,18 @@ export default function Nav() {
             <Link 
             key={item} 
             href={url}
-            className={`items-center hidden space-x-2 md:flex relative hover:before:absolute hover:before:w-full hover:before:h-2 hover:before:bg-[#f7801e] hover:before:bg-opacity-40 hover:before:rounded-sm ${ pathname === url && "text-[#f7801e]" }`}
+            className={`items-center hidden  md:flex ${ pathname === url && "text-[#f7801e]" }`}
             >
             {
               pathname === url && (
-                <GoTriangleDown className='text-xl '/>
+                <img src="/blob.svg" className='w-8 h-8 object-cover'/>
               )
             }
-            {item}
+            <span
+            className='relative hover:before:absolute hover:before:w-full hover:before:h-2 hover:before:bg-[#f7801e] hover:before:bg-opacity-40 hover:before:rounded-sm before:hover:top-3'
+            >
+              {item}
+            </span>
             </Link>
           ))
         }

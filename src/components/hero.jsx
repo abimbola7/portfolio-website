@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Changa } from 'next/font/google';
+import Link from 'next/link';
 
 const changa  = Changa({subsets : ['latin']})
 
@@ -83,6 +84,12 @@ export default function Hero() {
           <p className='whitespace-pre-line text-center'>
           I&apos;m an experienced frontend developer dedicated to crafting visually appealing and user-centric interfaces and also committed to clean, efficient code and continuous learning to stay abreast of industry trends.
           </p>
+      </div>
+
+      <div className='mt-5'>
+        <Link href="/resume.pdf"  className='w-fit rounded-xl bg-[#f7801e] px-4 py-2'>
+          View resume
+        </Link>
       </div>
     </motion.div>
   )
