@@ -5,9 +5,22 @@ import Switch from './switch';
 import { usePathname } from 'next/navigation';
 import { GoTriangleDown } from "react-icons/go";
 import { CiHome } from "react-icons/ci";
+import { motion } from 'framer-motion';
 
 
 export default function Nav() {
+  const itemBtnVariant = {
+    normal: { scale: 1 },
+    action: { scale: 1.2 },
+  };
+  
+  const underBarVariant = {
+    normal: { y : 10, height : 0 },
+    action: { y : 0 , height : ".5rem", transition : {
+      type : "tween",
+    }},
+  };
+  
   const pathname = usePathname()
   const [ name, setName ] = React.useState("abimbola.dev")
   const [ icon, setIcon ] = React.useState()
@@ -48,11 +61,19 @@ export default function Nav() {
                 <img src="/blob.svg" className='w-8 h-8 object-cover'/>
               )
             }
-            <span
-            className='relative hover:before:absolute hover:before:w-full hover:before:h-2 hover:before:bg-[#f7801e] hover:before:bg-opacity-40 hover:before:rounded-sm before:hover:top-3'
+            <motion.span
+            variants={itemBtnVariant} 
+            whileHover="action" 
+            initial="normal"
+            className='relative group overflow-hidden'
             >
+              <motion.div
+              variants={underBarVariant}
+              // initial="normal"
+              // animate="action"
+               className='hidden group-hover:block absolute w-full h-2 bg-[#f7801e] bg-opacity-40 top-3 z-[10000] left-0'></motion.div>
               {item}
-            </span>
+            </motion.span>
             </Link>
           ))
         }

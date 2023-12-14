@@ -15,7 +15,7 @@ export default function Contact() {
     initial="hidden"
     animate="visible"
     className="flex-1">
-      <h1 className="">CONTACT</h1>
+      <h1 className="mt-5 font-thin text-center text-3xl">CONTACT ME</h1>
       <p className={`mt-5 text-lg md:text-xl lg:text-3xl tracking-wider text-center font-bold ${changa.className}`}>If you have any exicting opportunity for me, feel free to reach out!</p>
       <FormHandler />
     </motion.div>

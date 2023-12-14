@@ -29,7 +29,7 @@ export default function Taskbar() {
             {
               pathname === items.link && (
                 <div className='absolute -bottom-5'>
-                  <img src="/blob.svg" className='w-5 h-5 object-cover transition-transform rotate-90 duration-200'/>
+                  <img src="/blob.svg" className='w-5 h-5 transition-transform rotate-90 duration-200'/>
                 </div>
               )
             }
