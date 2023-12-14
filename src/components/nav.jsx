@@ -10,8 +10,8 @@ import { motion } from 'framer-motion';
 
 export default function Nav() {
   const itemBtnVariant = {
-    normal: { scale: 1 },
-    action: { scale: 1.2 },
+    // normal: { scale: 1 },
+    // action: { scale: 1.2 },
   };
   
   const underBarVariant = {
@@ -69,8 +69,6 @@ export default function Nav() {
             >
               <motion.div
               variants={underBarVariant}
-              // initial="normal"
-              // animate="action"
                className='hidden group-hover:block absolute w-full h-2 bg-[#f7801e] bg-opacity-40 top-3 z-[10000] left-0'></motion.div>
               {item}
             </motion.span>
