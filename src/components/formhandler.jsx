@@ -11,7 +11,11 @@ export default function FormHandler() {
   const [ isLoading, setIsLoading ] = React.useState(false);
   
   const submitHandler = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    if (name.trim() === "" || email.trim() === "" || content.trim() === "") {
+      return;
+    }
+    console.log(name.trim() === "");
     console.log(name, email, content) 
     setIsLoading(true)
     const res = await fetch("/api/send", {
