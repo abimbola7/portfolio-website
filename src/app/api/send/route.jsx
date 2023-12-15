@@ -38,12 +38,12 @@ export async function POST(req) {
   const mailOptions = {
     from : email,
     to : email,
-    text : "This is a test string",
-    subject : "A Motherfucking Test!",
+    // text : "This is a test string",
+    subject : "Portfolio Email",
     html : `
-    <h3>Hello Abimbola</h3>
-    <li>From ${data.email}</li>
-    <li>Message: ${data.content}</li>
+    <h3 className="text-center text-2xl">Hello Abimbola</h3>
+    <li className="text-xl">From ${data.email}</li>
+    <li className="text-lg">Message: ${data.content}</li>
     `
   }
 
