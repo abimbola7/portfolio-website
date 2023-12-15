@@ -1,4 +1,5 @@
 "use client"
+import ParticleHeader from '@/components/particle-header'
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
 
@@ -6,13 +7,15 @@ const Providers = ({ children }) => {
   return (
     <ThemeProvider
     enableSystem={true}
-    attribute='class'
+    attribute="class"
     >
       <div
-      className='transition-colors duration-300 select-none'
+      className='transition-colors duration-500 select-none'
       >
         {children}
+
       </div>
+      <ParticleHeader />
     </ThemeProvider>
   )
 }

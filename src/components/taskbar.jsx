@@ -28,7 +28,7 @@ export default function Taskbar() {
             {items.icon}
             {
               pathname === items.link && (
-                <div className='absolute -bottom-6'>
+                <div className='absolute -bottom-5'>
                   <img src="/blob.svg" className='w-5 h-5 transition-transform rotate-90 duration-200'/>
                 </div>
               )

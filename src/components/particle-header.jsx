@@ -1,4 +1,6 @@
 "use client"
+import { current } from '@reduxjs/toolkit';
+import { useTheme } from 'next-themes';
 import React, { useCallback } from 'react'
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
@@ -6,7 +8,22 @@ import { loadSlim } from 'tsparticles-slim';
 
 
 export default function ParticleHeader() {
-
+    const { theme,  setTheme, systemTheme} = useTheme();
+    const [ mounted, setMounted ] = React.useState(false);
+    const [ bgColor, setBgColor ] = React.useState("#222222")
+    const currentTheme = theme === "system" ? systemTheme : theme
+    console.log(theme, currentTheme)
+    React.useEffect(()=>{
+        setMounted(true)
+        if (mounted) {
+            if (currentTheme === "light") {
+                setBgColor("#ff0000")
+            } else{
+                setBgColor("#222222")
+            }
+        }
+    },[currentTheme, mounted])
+    
    const options = React.useMemo(()=>{
     return {
         "links" : {
@@ -225,7 +242,7 @@ export default function ParticleHeader() {
             "url": ""
         },
         "background": {
-            "color": "#222222",
+            "color": bgColor,
             "image": "url(/noise.png)",
             // "position": "50% 50%",
             // "repeat": "no-repeat",
@@ -239,8 +256,8 @@ export default function ParticleHeader() {
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
-    // await loadFull (engine);
-    await loadSlim(engine);
+    await loadFull (engine);
+    // await loadSlim(engine);
 }, []);
 
 const particlesLoaded = useCallback(async container => {

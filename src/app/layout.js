@@ -7,6 +7,7 @@ import { Inter, Space_Mono, BioRhyme, Eczar, Space_Grotesk } from 'next/font/goo
 import './globals.css'
 import Providers from './Providers';
 
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,12 +30,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={spacegrotesk.className}>
         <ReduxProvider>
-          <Providers>
+          <Providers
+          >
             <div className='min-h-screen pb-20 md:pb-0 w-[90%] min-w-[90%] mx-auto flex flex-col text-[#a5ffc9]'>
               <Nav />
               {children}
               <Taskbar />
-              <ParticleHeader />
             </div>
           </Providers>
         </ReduxProvider>
