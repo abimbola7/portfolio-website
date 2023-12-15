@@ -2,6 +2,7 @@
 import React from 'react';
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
+import { MdOutlineNightlightRound } from "react-icons/md";
 import { useTheme } from 'next-themes';
 
 export default function Switch() {
@@ -22,7 +23,7 @@ export default function Switch() {
             >
             </div>
             <div className='absolute flex top-0 w-full h-full justify-between items-center pr-2 text-xl text-[#f7801e]'>
-              <MdDarkMode className={`duration-700 transition-opacity ${currentTheme === "light" ? "invisible opacity-0" : "visible opacity-100"}`}/>
+              <MdOutlineNightlightRound className={`duration-700 transition-opacity ${currentTheme === "light" ? "invisible opacity-0" : "visible opacity-100"} transition-transform rotate-180`}/>
               <MdLightMode className={`duration-700 transition-opacity ${currentTheme === "light"  ? "visible opacity-100" : "invisible opacity-0"}`}/>
             </div>
           </div>

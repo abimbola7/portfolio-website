@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { MdOutlineArrowForward } from "react-icons/md";
 import { motion } from 'framer-motion';
 import { animateVariant } from '@/components/hero';
+// import useIn
 import Link from 'next/link';
 
 export default function Projects() {
@@ -24,8 +25,30 @@ export default function Projects() {
         <div className='mt-5 space-y-8'>
           {
             projects.map((project, i)=>(
-              <div
+              <motion.div
               key={i}
+              initial={{
+                opacity : 0,
+                x : "100%"
+              }}
+              whileInView={{
+                opacity: 1,
+                x : 0
+              }}
+              viewport={
+                {
+                  once : false
+                }
+              }
+              transition={
+                {
+                  delay : .2,
+                  duration : 1,
+                  ease : "easeInOut",
+                  type : "spring",
+                  stiffness : "100"
+                }
+              }
               className="grid w-full grid-cols-1 px-4 py-5 tracking-wider border border-[#5f8f2a] md:grid-cols-3 dark:border-slate-700 backdrop-blur-2xl rounded-xl gap-y-4 md:gap-y-0 md:gap-x-4"
               >
                 <div className="">
@@ -70,7 +93,7 @@ export default function Projects() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))
           }
         </div>

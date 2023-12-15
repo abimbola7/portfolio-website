@@ -6,6 +6,10 @@ html::-webkit-scrollbar {
   display : none;
 } 
 
+/* body {
+  overflow-y: hidden;
+} */
+
 /* *{
   outline: 1px solid red;
 } */
