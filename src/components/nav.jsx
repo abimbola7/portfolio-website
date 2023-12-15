@@ -7,19 +7,19 @@ import { GoTriangleDown } from "react-icons/go";
 import { CiHome } from "react-icons/ci";
 import { motion } from 'framer-motion';
 
+export const itemBtnVariant = {
+  // normal: { scale: 1 },
+  // action: { scale: 1.2 },
+};
+
+export const underBarVariant = {
+  normal: { y : 10, height : 0 },
+  action: { y : 0 , height : ".5rem", transition : {
+    type : "tween",
+  }},
+};
 
 export default function Nav() {
-  const itemBtnVariant = {
-    // normal: { scale: 1 },
-    // action: { scale: 1.2 },
-  };
-  
-  const underBarVariant = {
-    normal: { y : 10, height : 0 },
-    action: { y : 0 , height : ".5rem", transition : {
-      type : "tween",
-    }},
-  };
   
   const pathname = usePathname()
   const [ name, setName ] = React.useState("abimbola.dev")
@@ -28,7 +28,7 @@ export default function Nav() {
     <header className='flex items-center justify-between pt-10 md:pt-20'>
       <div className=''>
         <Link 
-        className={`flex flex-row items-center space-x-1 ${name === "back to home" && "dark:hover:text-[#f7801e] hover:text-[#f1c7c7]"}`}
+        className={`flex flex-row items-center space-x-1 ${name === "back to home" && "hover:text-[#f7801e] "}`}
         onMouseOver={()=>{
             pathname !== "/" ? setName("back to home") : setName("abimbola.dev");
             pathname !== "/" ? setIcon(<CiHome className='text-xl'/>) : setIcon(null);
@@ -54,7 +54,7 @@ export default function Nav() {
             <Link 
             key={item} 
             href={url}
-            className={`items-center hidden  md:flex ${ pathname === url && "text-[#f7801e]" }`}
+            className={`items-center hidden md:flex ${ pathname === url && "text-[#f7801e]" }`}
             >
             {
               pathname === url && (

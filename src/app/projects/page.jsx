@@ -37,21 +37,23 @@ export default function Projects() {
                   className="object-cover object-center h-full rounded-lg"
                   />
                 </div>
-                <div className='flex flex-col col-span-2 space-y-2'>
-                  <h1 className="text-lg font-extrabold uppercase md:text-xl ">{project.name}</h1>
-                  <p className='text-sm md:text-md'>{project.description}</p>
-                  <div className='flex flex-wrap text-xs font-light uppercase md:text-sm'>
-                    {
-                      project.tools.map((tools, i)=>(
-                        <span key={i} className="mr-2">{tools}</span>
-                      ))
-                    }
+                <div className='flex flex-col col-span-2 space-y-2 justify-between'>
+                  <div className='space-y-3'>
+                    <h1 className="text-lg font-extrabold uppercase md:text-xl ">{project.name}</h1>
+                    <p className='text-sm md:text-md'>{project.description}</p>
+                    <div className='flex flex-wrap text-xs font-light uppercase md:text-sm '>
+                      {
+                        project.tools.map((tools, i)=>(
+                          <span key={i} className="mr-2">{tools}</span>
+                        ))
+                      }
+                    </div>
                   </div>
                   <div className="flex items-center space-x-6">
                     <Link 
                     href={project.live_site} 
                     target="_blank"
-                    className='flex items-center'
+                    className='flex items-center hover:text-[#f7801e]'
                     >
                     Live site
                     <GoLinkExternal className='ml-2'/>
@@ -60,7 +62,7 @@ export default function Projects() {
                     <Link 
                     href={project.github_link} 
                     target="_blank"
-                    className='flex items-center'
+                    className='flex items-center hover:text-[#f7801e]'
                     >
                     <FaGithub className='mr-2'/>
                     Github
