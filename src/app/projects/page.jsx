@@ -22,7 +22,7 @@ export default function Projects() {
     >
       <div className='relative w-full md:w-[75%] mx-auto'>
         <h1 className='sticky top-0 z-50 mt-5 text-lg font-thin uppercase md:text-2xl'>projects</h1>
-        <div className='mt-5 space-y-8'>
+        <div className='mt-5 space-y-8 overflow-hidden'>
           {
             projects.map((project, i)=>(
               <motion.div
@@ -60,7 +60,7 @@ export default function Projects() {
                   className="object-cover object-center h-full rounded-lg"
                   />
                 </div>
-                <div className='flex flex-col col-span-2 space-y-2 justify-between'>
+                <div className='flex flex-col justify-between col-span-2 space-y-2'>
                   <div className='space-y-3'>
                     <h1 className="text-lg font-extrabold uppercase md:text-xl ">{project.name}</h1>
                     <p className='text-sm md:text-md'>{project.description}</p>
@@ -100,7 +100,7 @@ export default function Projects() {
         <div className='mt-5 text-sm md:text-xl'>
           <Link href="https://github.com/abimbola7?tab=repositories" target='_blank' className='flex items-center group w-fit'>
           View more on Github
-          <MdOutlineArrowForward className='ml-1 duration-200 transition-transform group-hover:translate-x-2' />
+          <MdOutlineArrowForward className='ml-1 transition-transform duration-200 group-hover:translate-x-2' />
           </Link>
         </div>
       </div>
