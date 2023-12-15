@@ -243,10 +243,10 @@ export default function ParticleHeader() {
         },
         "background": {
             "color": bgColor,
-            "image": "url(/noise.png)",
+            "image": "url(/noisy.png)",
             // "position": "50% 50%",
             // "repeat": "no-repeat",
-            "size": "contain"
+            // "size": "cover"
         },
     }
    }, [bgColor])
