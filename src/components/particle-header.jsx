@@ -10,14 +10,14 @@ import { loadSlim } from 'tsparticles-slim';
 export default function ParticleHeader() {
     const { theme,  setTheme, systemTheme} = useTheme();
     const [ mounted, setMounted ] = React.useState(false);
-    const [ bgColor, setBgColor ] = React.useState("#222222")
+    const [ bgColor, setBgColor ] = React.useState("")
     const currentTheme = theme === "system" ? systemTheme : theme
     console.log(theme, currentTheme)
     React.useEffect(()=>{
         setMounted(true)
         if (mounted) {
             if (currentTheme === "light") {
-                setBgColor("#ff0000")
+                setBgColor("#f9f9f9")
             } else{
                 setBgColor("#222222")
             }
@@ -247,9 +247,9 @@ export default function ParticleHeader() {
             // "position": "50% 50%",
             // "repeat": "no-repeat",
             "size": "contain"
-        }
+        },
     }
-   }, [])
+   }, [bgColor])
 
   const particlesInit = useCallback(async engine => {
     console.log(engine);

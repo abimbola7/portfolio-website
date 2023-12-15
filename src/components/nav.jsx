@@ -28,7 +28,7 @@ export default function Nav() {
     <header className='flex items-center justify-between pt-10 md:pt-20'>
       <div className=''>
         <Link 
-        className={`flex flex-row items-center space-x-1 ${name === "back to home" && "hover:text-[#f7801e]"}`}
+        className={`flex flex-row items-center space-x-1 ${name === "back to home" && "dark:hover:text-[#f7801e] hover:text-[#f1c7c7]"}`}
         onMouseOver={()=>{
             pathname !== "/" ? setName("back to home") : setName("abimbola.dev");
             pathname !== "/" ? setIcon(<CiHome className='text-xl'/>) : setIcon(null);

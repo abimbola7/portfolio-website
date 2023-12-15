@@ -24,7 +24,7 @@ export default function Taskbar() {
           href={items.link}
           className={`flex flex-col items-center justify-between space-y-1 text-center relative ${ pathname === items.link && "text-[#f7801e]" }`}
           >
-            <p className='text-xs'>{items.name}</p>
+            <p className='hidden xs:block text-xs'>{items.name}</p>
             {items.icon}
             {
               pathname === items.link && (

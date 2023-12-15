@@ -86,7 +86,7 @@ export default function Hero() {
           </p>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-5 text-[#f9f9f9] dark:text-[#a5ffc9]'>
         <Link href="/resume.pdf"  className='w-fit bg-[#f7801e] px-4 py-2'>
           View resume
         </Link>

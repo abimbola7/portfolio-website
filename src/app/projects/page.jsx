@@ -26,7 +26,7 @@ export default function Projects() {
             projects.map((project, i)=>(
               <div
               key={i}
-              className="grid w-full grid-cols-1 px-4 py-5 tracking-wider border md:grid-cols-3 border-slate-700 backdrop-blur-2xl rounded-xl gap-y-4 md:gap-y-0 md:gap-x-4"
+              className="grid w-full grid-cols-1 px-4 py-5 tracking-wider border border-[#5f8f2a] md:grid-cols-3 dark:border-slate-700 backdrop-blur-2xl rounded-xl gap-y-4 md:gap-y-0 md:gap-x-4"
               >
                 <div className="">
                   <Image 

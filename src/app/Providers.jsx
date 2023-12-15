@@ -10,7 +10,7 @@ const Providers = ({ children }) => {
     attribute="class"
     >
       <div
-      className='transition-colors duration-500 select-none'
+      className='transition-colors duration-500 select-none dark:text-[#a5ffc9] text-[#3a3a3a]'
       >
         {children}
 

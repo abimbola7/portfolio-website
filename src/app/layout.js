@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <Providers
           >
-            <div className='min-h-screen pb-20 md:pb-0 w-[90%] min-w-[90%] mx-auto flex flex-col text-[#a5ffc9]'>
+            <div className='min-h-screen pb-20 md:pb-0 w-[90%] min-w-[90%] mx-auto flex flex-col'>
               <Nav />
               {children}
               <Taskbar />
