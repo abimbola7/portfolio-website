@@ -16,6 +16,7 @@ export const underBarVariant = {
   normal: { y : 10, height : 0 },
   action: { y : 0 , height : ".5rem", transition : {
     type : "tween",
+    ease : "easeInOut"  
   }},
 };
 
