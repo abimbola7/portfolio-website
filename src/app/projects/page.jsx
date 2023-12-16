@@ -22,7 +22,7 @@ export default function Projects() {
     >
       <div className='relative w-full md:w-[75%] mx-auto'>
         <h1 className='sticky top-0 z-50 mt-5 text-lg font-thin uppercase md:text-2xl'>projects</h1>
-        <div className='mt-5 space-y-8 overflow-hidden'>
+        <div className='mt-5 space-y-8'>
           {
             projects.map((project, i)=>(
               <motion.div
