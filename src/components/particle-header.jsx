@@ -244,6 +244,9 @@ export default function ParticleHeader() {
         "background": {
             "color": bgColor,
             "image": "url(/noisy.png)",
+            "size": "200px 200px",
+            "position": "0 0",
+            "attachment": "fixed",
             // "position": "50% 50%",
             // "repeat": "no-repeat",
             // "size": "cover"

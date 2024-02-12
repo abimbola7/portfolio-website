@@ -45,15 +45,15 @@ export default function FormHandler() {
       <ToastContainer  />
       <form
       onSubmit={submitHandler}
-      className="text-left mt-10 mx-auto max-w-4xl"
+      className="max-w-4xl mx-auto mt-10 text-left"
       >
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 justify-items-start'>
+        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 justify-items-start'>
           <div className='w-full sm:w-fit'>
             <label className="text-md md:text-lg">Your Name</label>
             <input
             value={name}
             onChange={(e)=>setName(e.target.value)}
-            className='border-b placeholder:text-xs py-2 placeholder:font-thin bg-transparent focus:outline-none block w-full'
+            className='block w-full py-2 bg-transparent border-b placeholder:text-xs placeholder:font-thin focus:outline-none'
             placeholder='Enter your name'
             />
           </div>
@@ -63,21 +63,21 @@ export default function FormHandler() {
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             type='email'
-            className='border-b placeholder:text-xs py-2 placeholder:font-thin bg-transparent focus:outline-none block w-full'
+            className='block w-full py-2 bg-transparent border-b placeholder:text-xs placeholder:font-thin focus:outline-none'
             placeholder='Enter your email address'
             />
           </div>
-          <div className='sm:col-span-2 flex flex-col w-full'>
+          <div className='flex flex-col w-full sm:col-span-2'>
             <label className='text-md md:text-lg'>Your Message</label>
             <input
             value={content}
             onChange={(e)=>setContent(e.target.value)}
-            className='border-b placeholder:text-xs py-2 placeholder:font-thin bg-transparent focus:outline-none block flex-1'
+            className='flex-1 block py-2 bg-transparent border-b placeholder:text-xs placeholder:font-thin focus:outline-none'
             placeholder='Hey i would like to work with you'
             />
           </div>
         </div>
-        <div className='text-center mt-6'>
+        <div className='mt-6 text-center'>
           <button
           disabled={isLoading}
           className={`bg-[#f7801e] px-4 py-2 font-semibold relative focus:outline-none`}
