@@ -11,6 +11,14 @@ const initialProductState = {
       live_site : "https://sports-wear-gamma.vercel.app/"
     },
     {
+      name : "Art Website",
+      imageUrl : "/images/psharing.png",
+      description : "Post artworks for other artists to view, like and comment.",
+      tools : ["Next.js", "React", "TailwindCSS", "MonogoDB", "Firebase", "Shadcn"],
+      github_link : "https://github.com/abimbola7/photo-sharing-app",
+      live_site : "https://art-nook.vercel.app/"
+    },
+    {
       name : "Spotify Api",
       imageUrl : "/images/spotify.png",
       description : "View my currently playing song or my last listened song depending on my status.",
