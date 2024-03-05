@@ -32,8 +32,8 @@ export default function Hero() {
     initial="hidden"
     animate="visible"
     exit={"exitVariant"}
-    className='w-full flex items-center flex-1 justify-center flex-col py-10'>
-      <p className='uppercase text-lg md:text-2xl font-extralight tracking-widest'>
+    className='flex flex-col items-center justify-center flex-1 w-full py-10'>
+      <p className='text-lg tracking-widest uppercase md:text-2xl font-extralight'>
         <span className='font-bold'>hello! </span>
         my name is
       </p>
@@ -80,14 +80,17 @@ export default function Hero() {
         </motion.p>
       </div>
 
-      <div className='whitespace-pre-line max-w-lg mt-10 text-sm sm:text-lg font-light'>
-          <p className='whitespace-pre-line text-center'>
+      <div className='max-w-lg mt-10 text-sm font-light whitespace-pre-line sm:text-lg'>
+          <p className='text-center whitespace-pre-line'>
           I&apos;m an experienced frontend developer dedicated to crafting visually appealing and user-centric interfaces and also committed to clean, efficient code and continuous learning to stay abreast of industry trends.
           </p>
       </div>
 
       <div className='mt-5 text-[#f9f9f9] dark:text-[#a5ffc9]'>
-        <Link href="/resume.pdf"  className='w-fit bg-[#f7801e] px-4 py-2'>
+        <Link 
+        target="_blank"
+        href="https://docs.google.com/document/d/e/2PACX-1vRy2WcQiLE_-MZHnMpQYYzNSigftUNrdAxi7ugqnq7HXJglHqhDIvzyq6Pveidqt3j_AZn-r8s7Lyxt/pub" 
+         className='w-fit bg-[#f7801e] px-4 py-2'>
           View resume
         </Link>
       </div>
