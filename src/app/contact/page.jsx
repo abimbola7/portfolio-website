@@ -13,7 +13,7 @@ const changa  = Changa({subsets : ['latin']})
 export default function Contact() {
   const contactInfo = [
     { name : "twitter", link : "https://twitter.com/_jidex", icon : "https://cdn2.iconfinder.com/data/icons/threads-by-instagram/24/x-logo-twitter-new-brand-512.png"},
-    { name : "linkedIn", link : "https://www.linkedin.com/in/abimbola7/", icon : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" },
+    // { name : "linkedIn", link : "https://www.linkedin.com/in/abimbola7/", icon : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" },
     { name : "github", link : "https://github.com/abimbola7", icon : "https://cdn-icons-png.flaticon.com/256/25/25231.png" }
   ]
   return (

@@ -73,24 +73,32 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="flex items-center space-x-6">
-                    <Link 
-                    href={project.live_site} 
-                    target="_blank"
-                    className='flex items-center hover:text-[#f7801e]'
-                    >
-                    Live site
-                    <GoLinkExternal className='ml-2'/>
-                    </Link>
+                    {
+                      project.live_site && (
+                          <Link 
+                          href={project.live_site || "#"} 
+                          target="_blank"
+                          className='flex items-center hover:text-[#f7801e]'
+                          >
+                          Live site
+                          <GoLinkExternal className='ml-2'/>
+                          </Link>
+                      )
+                    }
                     
-                    <Link 
-                    href={project.github_link} 
-                    target="_blank"
-                    className='flex items-center hover:text-[#f7801e]'
-                    >
-                    <FaGithub className='mr-2'/>
-                    Github
-                    <GoLinkExternal className='ml-2'/>
-                    </Link>
+                    {
+                      project.github_link && (
+                        <Link 
+                        href={project.github_link || "#"} 
+                        target="_blank"
+                        className='flex items-center hover:text-[#f7801e]'
+                        >
+                        <FaGithub className='mr-2'/>
+                        Github
+                        <GoLinkExternal className='ml-2'/>
+                        </Link>
+                      )
+                    }
                   </div>
                 </div>
               </motion.div>

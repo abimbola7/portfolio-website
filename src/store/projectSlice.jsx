@@ -15,12 +15,12 @@ const initialProductState = {
       imageUrl : "/images/conceptzilla.png",
       description : "A clone of the ConceptZilla landing page, featuring smooth GSAP animations for engaging motion effects. Built with Next.js and Tailwind CSS, this project showcases interactive scroll-based transitions and optimized performance for a seamless user experience.",
       tools : ["Next.js", "GSAP", "TailwindCSS"],
-      // github_link : "https://github.com/abimbola7/sports-wear",
+      github_link : "https://github.com/abimbola7/conceptzilla",
       live_site : "https://conceptzilla.vercel.app/"
     },
     {
       name : "useGalaxyFi Waitlist Site – Interactive Fintech UI",
-      imageUrl : "/images/usegalaxyfi.png",
+      imageUrl : "/images/galaxyfi.png",
       description : "A modern and responsive fintech waitlist website built with Next.js and Tailwind CSS. Designed for a seamless user experience, it features an intuitive subscription flow, allowing users to easily join the waitlist. Optimized for performance and accessibility.",
       tools : ["Next.js", "TailwindCSS", "Typescript", "Tsparticles"],
       // github_link : "https://github.com/abimbola7/sports-wear",
