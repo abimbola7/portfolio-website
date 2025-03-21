@@ -51,19 +51,21 @@ export default function Projects() {
               }
               className="grid w-full grid-cols-1 px-4 py-5 tracking-wider border border-[#5f8f2a] md:grid-cols-3 dark:border-slate-700 backdrop-blur-2xl rounded-xl gap-y-4 md:gap-y-0 md:gap-x-4"
               >
-                <div className="">
+                <div className="flex items-center justify-center">
                   <Image 
                   src={project.imageUrl}
-                  width={700}
-                  height={700}
+                  width={500}
+                  height={500}
                   alt={"img"}
-                  className="object-cover object-center h-full rounded-lg"
+                  className="object-cover object-center sm:w-[500px] h-full sm:h-[200px] rounded-lg"
                   />
                 </div>
-                <div className='flex flex-col justify-between col-span-2 space-y-2'>
+                <div className='flex flex-col justify-between col-span-2 space-y-6'>
                   <div className='space-y-3'>
                     <h1 className="text-lg font-extrabold uppercase md:text-xl ">{project.name}</h1>
                     <p className='text-sm md:text-md'>{project.description}</p>
+                  </div>
+                  <div className="flex flex-col gap-3">
                     <div className='flex flex-wrap text-xs font-light uppercase md:text-sm '>
                       {
                         project.tools.map((tools, i)=>(
@@ -71,34 +73,34 @@ export default function Projects() {
                         ))
                       }
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-6">
-                    {
-                      project.live_site && (
+                    <div className="flex items-center space-x-6">
+                      {
+                        project.live_site && (
+                            <Link 
+                            href={project.live_site || "#"} 
+                            target="_blank"
+                            className='flex items-center hover:text-[#f7801e]'
+                            >
+                            Live site
+                            <GoLinkExternal className='ml-2'/>
+                            </Link>
+                        )
+                      }
+                      
+                      {
+                        project.github_link && (
                           <Link 
-                          href={project.live_site || "#"} 
+                          href={project.github_link || "#"} 
                           target="_blank"
                           className='flex items-center hover:text-[#f7801e]'
                           >
-                          Live site
+                          <FaGithub className='mr-2'/>
+                          Github
                           <GoLinkExternal className='ml-2'/>
                           </Link>
-                      )
-                    }
-                    
-                    {
-                      project.github_link && (
-                        <Link 
-                        href={project.github_link || "#"} 
-                        target="_blank"
-                        className='flex items-center hover:text-[#f7801e]'
-                        >
-                        <FaGithub className='mr-2'/>
-                        Github
-                        <GoLinkExternal className='ml-2'/>
-                        </Link>
-                      )
-                    }
+                        )
+                      }
+                    </div>
                   </div>
                 </div>
               </motion.div>

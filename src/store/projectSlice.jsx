@@ -51,7 +51,7 @@ const initialProductState = {
       live_site : "https://art-nook.vercel.app/"
     },
     {
-      name : "Spotify Api",
+      name : "Spotify Now Playing",
       imageUrl : "/images/spotify.png",
       description : "View my currently playing song or my last listened song depending on my status.",
       tools : ["Next.js", "TailwindCSS", "Spotify API"],
